@@ -27,8 +27,8 @@ public class AgenciaAutomotriz {
 		
 	}
 	
-	public boolean altaAuto (String marca, char color, int año, double precio) {
-		Auto auto1 = new Auto(marca, color, año, precio);
+	public boolean altaAuto (String marca, char color, int aÃ±o, double precio) {
+		Auto auto1 = new Auto(marca, color, aÃ±o, precio);
 		boolean res = false;
 		marca = marca.toUpperCase();
 		if (ManejadorArregloGenerico.insertaOrdena(auto, tA, auto1) > tA) {
