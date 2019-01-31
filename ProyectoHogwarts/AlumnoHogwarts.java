@@ -1,6 +1,6 @@
 //Diana Espinosa Ruiz
-//MatrÌcula 000179164
-//Proyecto Colegio Hogwarts de Magia y HechicerÌa
+//Matr√≠cula 000179164
+//Proyecto Colegio Hogwarts de Magia y Hechicer√≠a
 
 //En esta clase se encuentran los atributos del alumno.
 package generales;
@@ -26,7 +26,7 @@ public class AlumnoHogwarts implements Comparable <AlumnoHogwarts>{
 	private String[] materias;
 	
 	//Transformaciones, Encantamientos, Pociones, Historia de la Magia, 
-	//Defensa Contra las Artes Oscuras, AstronomÌa y HerbologÌa
+	//Defensa Contra las Artes Oscuras, Astronom√≠a y Herbolog√≠a
 	private boolean lentes;
 	private int padresMuggles;
 	private int puntos;
@@ -71,12 +71,12 @@ public class AlumnoHogwarts implements Comparable <AlumnoHogwarts>{
 
 	}
 	
-	//Determinar a cu·l de las cuatro casas: Gryffindor, Hufflepuff, Ravenclaw o Slytherin
+	//Determinar a cu√°l de las cuatro casas: Gryffindor, Hufflepuff, Ravenclaw o Slytherin
 	//debe pertenecer un nuevo estudiante al entrar en Hogwarts
 
-	public boolean altaCalificaciÛn (String materia, char cal) {
+	public boolean altaCalificaci√≥n (String materia, char cal) {
 		
-		/*Si escribe la calificaciÛn en min˙sula la combierte en may˙scula*/
+		/*Si escribe la calificaci√≥n en min√∫sula la combierte en may√∫scula*/
 		if(cal >= 'a' && cal <= 'z')
 			cal=  (char) (cal - 'a'+ 'A');
 		
@@ -103,7 +103,7 @@ public class AlumnoHogwarts implements Comparable <AlumnoHogwarts>{
 				break;
 				case 'N': res = false;
 				break;
-				default: throw new NumberFormatException(); //Manda error si la calificaciÛn
+				default: throw new NumberFormatException(); //Manda error si la calificaci√≥n
 				//no es ninguna de las opciones
 		
 			}
@@ -127,8 +127,8 @@ public class AlumnoHogwarts implements Comparable <AlumnoHogwarts>{
 			
 			
 			else if(pos >= 0 && cal == 'N') {
-				/*Si la calificaciÛn es igual a N y la materia ya existe es que el usuario
-				 * se equivocÛ y dio de alta una materia que no lleva, entonces pone la calificaciÛn
+				/*Si la calificaci√≥n es igual a N y la materia ya existe es que el usuario
+				 * se equivoc√≥ y dio de alta una materia que no lleva, entonces pone la calificaci√≥n
 				 * en N y actualiza la boleta de calificaiones.
 				 */
 				materias[pos] = materias[tM - 1];
@@ -164,10 +164,10 @@ public class AlumnoHogwarts implements Comparable <AlumnoHogwarts>{
 	}
 
 	public String informous() {
-		//Imprime la informaciÛn del altumno el .toString
+		//Imprime la informaci√≥n del altumno el .toString
 		StringBuilder informacion = new StringBuilder();
 		informacion.append("Estudiante: ").append(nombre).append("\nCasa: ").append(casa);
-		informacion.append("\nClave ˙nica: ").append(clave);
+		informacion.append("\nClave √∫nica: ").append(clave);
 		informacion.append("\nPatronus: ").append(patronus).append("\nEstatus de sangre: ").append(estatusSangre);
 		informacion.append("\nMascota: ").append(mascota).append("\nUsa lentes: ").append(lentes);
 		informacion.append("\nBoleta de calificaciones: ").append(boletaCalificacion()).append("\n");
@@ -177,9 +177,9 @@ public class AlumnoHogwarts implements Comparable <AlumnoHogwarts>{
 	}
 	
 	public void sacaPatronus( ) {
-		String[] posiblePatronus = {"Cerdo hormiguero" , "Abraxan caballo con alas", "Sumador", "TejÛn", "MurciÈlago",
-				"Basset Hound", "Beagle", "Oso negro","Mamba negro", "Semental negro", "Liebre", "B˙ho", "B˙falo", 
-				"Zopilote", "Cuervo", "Gama", "DelfÌn", "Galgo", "DragÛn", "RatÛn de campo", "¡guila", "LibÈlula"};
+		String[] posiblePatronus = {"Cerdo hormiguero" , "Abraxan caballo con alas", "Sumador", "Tej√≥n", "Murci√©lago",
+				"Basset Hound", "Beagle", "Oso negro","Mamba negro", "Semental negro", "Liebre", "B√∫ho", "B√∫falo", 
+				"Zopilote", "Cuervo", "Gama", "Delf√≠n", "Galgo", "Drag√≥n", "Rat√≥n de campo", "√Åguila", "Lib√©lula"};
 		Random r = new Random();
 		int i = r.nextInt(posiblePatronus.length);
 		
